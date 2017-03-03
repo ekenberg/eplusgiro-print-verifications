@@ -1,0 +1,26 @@
+* What
+
+  Greasemonkey script to automatically print verifications from the Swedish bank [[http://www.nordea.se][Nordea]]
+and their service *eplusgiro*.
+
+* Why
+
+  Every year I find myself printing a few hundred verifications from the bank webpage. Every single
+print requires opening the verification in a popup, clicking 'Print', accepting the print dialog and
+closing the popup. It would take hours to do manually, and weeks to recover mentally.
+
+At first I created a [[http://www.techrepublic.com/blog/linux-and-open-source/a-quick-presentation-of-d-bus-based-automation/][qdbus]] script to automate the process using the KDE native browser [[https://konqueror.org/features/browser.php][Konqueror]],
+but after switching to [[www.firefox.com][Firefox]] I decided to use [[http://www.greasespot.net/][Greasemonkey]] to augment the bank webpage with a
+print-many function.
+
+* How
+
+  Install it in Greasemonkey. Under preferences set /Script Settings/ -> /Included Pages/ to
+=https://eplusgiro.plusgirot.se/elia/account/booked/*=
+
+After logging in to your account, open the verification list. At the top of the page there should
+be a form which lets you enter a range of verifications to print. Hover over any verification and
+check the url to see which range number it has. Make sure your printer is online and click Print.
+Go do something else for a while, it will be hard to use the computer with the popups and print
+dialogs popping up all the time. The process isn't fast but it's completely automatic, preserving
+your mental sanity and reducing [[https://en.wikipedia.org/wiki/Repetitive_strain_injury][RSI]] from mouse-clicking.
